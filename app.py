@@ -29,7 +29,7 @@ with st.sidebar:
     st.header("Dữ liệu dự đoán")
     selected_model = st.selectbox("Model dự đoán", ["PyTorch", "Keras", "So sánh cả hai"])
     architecture = st.radio("Kiến trúc", ["RNN"], key="architecture")
-    methods = ["Giá trực tiếp"] if architecture == "RNN" else ["Giá trực tiếp"]
+    methods = ["Giá trực tiếp", "Log return"] if architecture == "RNN" else ["Giá trực tiếp"]
     method = st.radio("Cách dự đoán", methods, key="prediction_method_" + architecture)
     variant = "lstm" if architecture == "LSTM" else ("log_return" if method == "Log return" else "price")
     try:

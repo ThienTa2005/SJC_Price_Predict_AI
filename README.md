@@ -22,8 +22,12 @@ Cột `buy_1l` có thể đi kèm nhưng model chỉ dự đoán giá bán `sell
 Ngày hợp lệ, không trùng; giá không âm, hữu hạn. Tệp tối đa 10 MB.
 Đơn vị triệu VND/lượng được suy ra từ thang giá CSV theo metadata notebook,
 không quy đổi hay nhân giá đầu vào. Dữ liệu mẫu là lịch sử, không cập nhật trực tiếp.
-Chỉ có RNN giá trực tiếp vì notebook Gold hiện có checkpoint cho cấu hình này.
-Model và scaler được lấy từ artifacts/gold, scaler giữ nguyên từ tập huấn luyện.
+Có thể chọn RNN giá trực tiếp hoặc Log return cho cả PyTorch và Keras.
+Log return dùng checkpoint từ RNN_Gold_LogReturn_PyTorch_Keras.ipynb, học biến động
+logarit giữa các giá liên tiếp rồi quy đổi dự đoán về triệu VND/lượng. CSV vẫn chứa
+giá gốc và mọi giá phải lớn hơn 0 khi chọn Log return.
+Model và scaler được lấy từ artifacts/gold và artifacts/gold_log_return,
+scaler giữ nguyên từ tập huấn luyện.
 
 ## Deploy
 

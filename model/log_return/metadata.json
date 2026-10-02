@@ -1,0 +1,68 @@
+{
+  "dataset": "SJC Gold Vietnam",
+  "target": "sell_1l",
+  "lookback": 60,
+  "sequence_length": 59,
+  "target_transform": "log_return",
+  "input_transform": "log_return",
+  "unit": "million VND per luong (assumed from CSV scale)",
+  "forecast_horizon": "next observation",
+  "config": {
+    "seed": 42,
+    "hidden": 64,
+    "dropout": 0.2,
+    "lr": 0.001,
+    "batch_size": 64,
+    "max_epochs": 250,
+    "min_epochs": 30,
+    "patience": 25,
+    "lr_factor": 0.5,
+    "lr_patience": 5,
+    "clipnorm": 1.0,
+    "train_shuffle": false
+  },
+  "scalers": {
+    "SJC_Gold": {
+      "mean": 0.00023264450203764795,
+      "scale": 0.005663282588812312,
+      "fit_rows": 4972,
+      "fit_last_date": "2023-03-28",
+      "variable": "log_return"
+    }
+  },
+  "versions": {
+    "python": "3.13.5",
+    "numpy": "2.3.1",
+    "pandas": "2.3.1",
+    "scikit-learn": "1.9.0",
+    "torch": "2.8.0",
+    "tensorflow": "2.20.0rc0",
+    "keras": "3.11.1"
+  },
+  "csv_sha256": "732c9dda53ed5a1bbcf8ecad1296d1ad909a2f877d6271b5b7fdc162de815267",
+  "training": {
+    "pytorch": {
+      "epochs": 30,
+      "train_seconds": 21.429561299999477,
+      "best_val_loss": 1.1144187174713185,
+      "best_epoch": 4,
+      "device": "cpu",
+      "parameters": 4353,
+      "checkpoint_reload_checked": true
+    },
+    "keras": {
+      "epochs": 30,
+      "train_seconds": 21.73878839999088,
+      "best_val_loss": 1.124708890914917,
+      "best_epoch": 3,
+      "device": "[LogicalDevice(name='/device:CPU:0', device_type='CPU')]",
+      "parameters": 4289,
+      "checkpoint_reload_checked": true
+    }
+  },
+  "runtime_threads": {
+    "OMP_NUM_THREADS": null,
+    "TF_NUM_INTRAOP_THREADS": null,
+    "TF_NUM_INTEROP_THREADS": null
+  }
+}

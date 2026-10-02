@@ -1,0 +1,3 @@
+Model,MAE thay đổi (triệu VND/lượng),"Đúng hướng, gồm không đổi (%)"
+PyTorch RNN log return,0.8962297046195952,38.048780487804876
+Keras RNN log return,0.9014270680370073,35.9349593495935
