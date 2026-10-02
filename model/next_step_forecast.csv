@@ -1,0 +1,3 @@
+Model,Prediction (triệu VND/lượng),Last observed (triệu VND/lượng)
+PyTorch RNN,96.14719744401678,144.3
+Keras RNN,103.94170646087568,144.3

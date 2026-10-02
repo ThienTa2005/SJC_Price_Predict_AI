@@ -1,0 +1,7 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+streamlit==1.62.0
+torch==2.8.0+cpu
+numpy==2.3.1
+pandas==2.3.1
+
+keras==3.11.1

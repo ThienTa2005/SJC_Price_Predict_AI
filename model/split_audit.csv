@@ -1,0 +1,2 @@
+group,rows,train,validation,test,train_end,validation_start,test_start
+SJC_Gold,6202,4913,614,615,2023-03-28,2023-03-29,2024-12-02
